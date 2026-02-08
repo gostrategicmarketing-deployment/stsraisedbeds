@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raised Bed Gardening with Brian Lowell | School of Traditional Skills</title>
+    <!-- Brand Fonts: Archivo for body, IM Fell Great Primer for headers -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IM+Fell+Great+Primer:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================
+           SCHOOL OF TRADITIONAL SKILLS BRAND COLORS
+           ============================================ */
+        :root {
+            /* Primary */
+            --charcoal: #35383F;
+            --sun-yellow: #E9B242;
+            
+            /* Neutrals */
+            --clay: #B5B5B5;
+            --light-stone: #F4F4F4;
+            --milk-white: #FFFFFF;
+            
+            /* Additional for depth */
+            --charcoal-dark: #2a2d33;
+            --charcoal-light: #4a4d55;
+            --sun-yellow-dark: #c99a35;
+            --sun-yellow-light: #f0c464;
+            
+            /* Text */
+            --text-primary: var(--charcoal);
+            --text-secondary: #5a5d65;
+            --text-light: var(--clay);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Archivo', sans-serif;
+            background: var(--light-stone);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        /* Brand Typography */
+        h1, h2, h3 {
+            font-family: 'IM Fell Great Primer', serif;
+            line-height: 1.25;
+            color: var(--charcoal);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            background: var(--charcoal);
+            padding: 50px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle wheat pattern overlay */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 120%, rgba(233, 178, 66, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .credential-hero {
+            display: inline-block;
+            background: rgba(233, 178, 66, 0.15);
+            color: var(--sun-yellow);
+            padding: 8px 18px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(233, 178, 66, 0.3);
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            color: var(--milk-white);
+            font-size: clamp(28px, 5vw, 42px);
+            margin-bottom: 18px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        .hero h1 span {
+            color: var(--sun-yellow);
+        }
+
+        .hero-specifics {
+            color: rgba(255,255,255,0.85);
+            font-size: 17px;
+            max-width: 550px;
+            margin: 0 auto 25px;
+            line-height: 1.6;
+        }
+
+        .hero-specifics strong {
+            color: var(--sun-yellow);
+        }
+
+        /* CTA Buttons - Brand Style */
+        .cta-button {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            background: var(--sun-yellow);
+            color: var(--charcoal);
+            padding: 16px 40px 14px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: 'Archivo', sans-serif;
+        }
+
+        .cta-button .cta-main {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .cta-button .cta-sub {
+            font-size: 12px;
+            font-weight: 400;
+            opacity: 0.8;
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        .cta-button:hover {
+            background: var(--sun-yellow-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(233, 178, 66, 0.3);
+        }
+
+        .guarantee-badge {
+            margin-top: 15px;
+            color: rgba(255,255,255,0.7);
+            font-size: 13px;
+        }
+
+        /* ============================================
+           IMAGE PLACEHOLDERS (Replace with actual images)
+           ============================================ */
+        
+        /* Hero Image */
+        .hero-image-placeholder {
+            max-width: 700px;
+            height: 350px;
+            margin: 0 auto 30px;
+            background: rgba(255,255,255,0.1);
+            border: 2px dashed var(--sun-yellow);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .placeholder-content {
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .placeholder-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--sun-yellow);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .placeholder-specs {
+            display: block;
+            font-size: 12px;
+            opacity: 0.7;
+            margin-bottom: 5px;
+        }
+
+        .placeholder-desc {
+            display: block;
+            font-size: 11px;
+            opacity: 0.5;
+            font-style: italic;
+        }
+
+        /* When you add real images, use this class */
+        .hero-image {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Timeline Photos */
+        .timeline-photos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            max-width: 650px;
+            margin: 0 auto 40px;
+        }
+
+        @media (min-width: 600px) {
+            .timeline-photos {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .timeline-photo-item {
+            text-align: center;
+        }
+
+        .timeline-photo-placeholder {
+            background: var(--milk-white);
+            border: 2px dashed var(--sun-yellow);
+            border-radius: 6px;
+            padding: 30px 10px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-photo-placeholder .placeholder-label {
+            color: var(--charcoal);
+            font-size: 11px;
+        }
+
+        .timeline-photo-placeholder .placeholder-specs {
+            color: var(--text-secondary);
+            font-size: 10px;
+        }
+
+        .timeline-photo-item p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* When you add real images */
+        .timeline-photo-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        /* Instructor Photo */
+        .instructor-image-placeholder {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: var(--charcoal);
+            border: 2px dashed var(--sun-yellow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .instructor-image-placeholder .placeholder-label {
+            font-size: 9px;
+            margin-bottom: 2px;
+        }
+
+        .instructor-image-placeholder .placeholder-specs {
+            font-size: 8px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .instructor-image-placeholder .placeholder-desc {
+            font-size: 7px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* When you add real instructor image */
+        .instructor-photo {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        /* Student Garden Photos */
+        .student-gardens {
+            margin-bottom: 40px;
+        }
+
+        .student-gardens-title {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--charcoal);
+        }
+
+        .student-gardens-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 600px) {
+            .student-gardens-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .student-garden-item {
+            text-align: center;
+        }
+
+        .student-garden-placeholder {
+            background: var(--light-stone);
+            border: 2px dashed var(--sun-yellow);
+            border-radius: 6px;
+            padding: 50px 15px;
+            margin-bottom: 10px;
+        }
+
+        .student-garden-placeholder .placeholder-label {
+            color: var(--charcoal);
+            font-size: 11px;
+        }
+
+        .student-garden-placeholder .placeholder-specs {
+            color: var(--text-secondary);
+            font-size: 10px;
+        }
+
+        .student-caption {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* When you add real student images */
+        .student-garden-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        /* ============================================
+           PAIN SECTION
+           ============================================ */
+        .pain-section {
+            padding: 60px 20px;
+            background: var(--milk-white);
+        }
+
+        .pain-section h2 {
+            font-size: clamp(24px, 4vw, 32px);
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .pain-bullets {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .pain-bullet {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .pain-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--light-stone);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 18px;
+            border: 2px solid var(--clay);
+        }
+
+        .pain-text strong {
+            color: var(--charcoal);
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .pain-text span {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        /* ============================================
+           TIMELINE SECTION
+           ============================================ */
+        .timeline-section {
+            padding: 60px 20px;
+            background: var(--light-stone);
+        }
+
+        .timeline-section h2 {
+            font-size: clamp(24px, 4vw, 32px);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .timeline {
+            max-width: 550px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--sun-yellow);
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .timeline-marker {
+            width: 50px;
+            height: 50px;
+            background: var(--charcoal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sun-yellow);
+            font-weight: 700;
+            font-size: 12px;
+            flex-shrink: 0;
+            z-index: 1;
+            text-transform: uppercase;
+        }
+
+        .timeline-content h3 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .timeline-content p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* ============================================
+           INSTRUCTOR SECTION
+           ============================================ */
+        .instructor-section {
+            padding: 60px 20px;
+            background: var(--milk-white);
+        }
+
+        .instructor-card {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--light-stone);
+            border-radius: 8px;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            text-align: center;
+        }
+
+        @media (min-width: 600px) {
+            .instructor-card {
+                flex-direction: row;
+                text-align: left;
+            }
+        }
+
+        .instructor-image {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: var(--charcoal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sun-yellow);
+            font-family: 'IM Fell Great Primer', serif;
+            font-size: 38px;
+            flex-shrink: 0;
+        }
+
+        .instructor-info h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .instructor-credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+            justify-content: center;
+        }
+
+        @media (min-width: 600px) {
+            .instructor-credentials {
+                justify-content: flex-start;
+            }
+        }
+
+        .credential-tag {
+            background: var(--sun-yellow);
+            color: var(--charcoal);
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .instructor-quote {
+            font-family: 'IM Fell Great Primer', serif;
+            font-style: italic;
+            color: var(--text-secondary);
+            border-left: 3px solid var(--sun-yellow);
+            padding-left: 15px;
+            margin-top: 12px;
+            font-size: 16px;
+        }
+
+        /* ============================================
+           BENEFITS SECTION
+           ============================================ */
+        .benefits-section {
+            padding: 60px 20px;
+            background: var(--charcoal);
+            color: var(--milk-white);
+        }
+
+        .benefits-section h2 {
+            font-size: clamp(24px, 4vw, 32px);
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--milk-white);
+        }
+
+        .benefits-grid {
+            display: grid;
+            gap: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 600px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .benefit-card {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .benefit-card h3 {
+            color: var(--sun-yellow);
+            font-size: 17px;
+            margin-bottom: 8px;
+            font-family: 'Archivo', sans-serif;
+            font-weight: 600;
+        }
+
+        .benefit-card p {
+            opacity: 0.85;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* ============================================
+           WHAT'S INSIDE SECTION
+           ============================================ */
+        .whats-inside {
+            padding: 60px 20px;
+            background: var(--light-stone);
+        }
+
+        .whats-inside h2 {
+            font-size: clamp(24px, 4vw, 32px);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .inside-grid {
+            display: grid;
+            gap: 15px;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 500px) {
+            .inside-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .inside-item {
+            background: var(--milk-white);
+            padding: 25px;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .inside-number {
+            font-family: 'IM Fell Great Primer', serif;
+            font-size: 34px;
+            color: var(--charcoal);
+            font-weight: 400;
+        }
+
+        .inside-label {
+            font-size: 12px;
+            color: var(--sun-yellow);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .inside-detail {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* ============================================
+           PROOF SECTION
+           ============================================ */
+        .proof-section {
+            padding: 60px 20px;
+            background: var(--milk-white);
+        }
+
+        .proof-section h2 {
+            font-size: clamp(24px, 4vw, 32px);
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .proof-intro {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 35px;
+            font-size: 15px;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            gap: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background: var(--light-stone);
+            padding: 25px;
+            border-radius: 6px;
+            position: relative;
+            border-left: 4px solid var(--sun-yellow);
+        }
+
+        .testimonial p {
+            font-family: 'IM Fell Great Primer', serif;
+            font-style: italic;
+            margin-bottom: 12px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .testimonial p.testimonial-placeholder {
+            color: var(--sun-yellow);
+            background: rgba(233, 178, 66, 0.1);
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Archivo', sans-serif;
+            font-style: normal;
+            font-size: 13px;
+        }
+
+        .testimonial-source {
+            font-weight: 600;
+            color: var(--charcoal);
+            font-size: 13px;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            text-align: center;
+            margin-top: 45px;
+            padding-top: 40px;
+            border-top: 1px solid var(--clay);
+        }
+
+        .stat-item strong {
+            display: block;
+            font-size: clamp(24px, 4vw, 34px);
+            color: var(--charcoal);
+            font-family: 'IM Fell Great Primer', serif;
+        }
+
+        .stat-item span {
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        /* ============================================
+           OFFER SECTION - EMAIL CAPTURE + DISCOUNT
+           ============================================ */
+        .offer-section {
+            padding: 60px 20px;
+            background: var(--light-stone);
+        }
+
+        .offer-section h2 {
+            font-size: clamp(24px, 4vw, 32px);
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .offer-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 35px;
+            font-size: 15px;
+        }
+
+        /* Email Capture Box - now at bottom of price box */
+
+        /* Price Box */
+        .price-box {
+            max-width: 520px;
+            margin: 0 auto;
+            background: var(--charcoal);
+            border-radius: 8px;
+            padding: 35px;
+            text-align: center;
+            color: var(--milk-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .price-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(233, 178, 66, 0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .price-box-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Value Stack */
+        .value-stack {
+            margin-bottom: 10px;
+        }
+
+        .value-title {
+            font-family: 'IM Fell Great Primer', serif;
+            font-size: 20px;
+            color: var(--sun-yellow);
+            margin-bottom: 20px;
+        }
+
+        .included-list {
+            text-align: left;
+            margin-bottom: 0;
+        }
+
+        .included-list li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            list-style: none;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .included-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--sun-yellow);
+            font-weight: 700;
+        }
+
+        .price-divider {
+            height: 1px;
+            background: rgba(255,255,255,0.15);
+            margin: 25px 0;
+        }
+
+        .price-header {
+            margin-bottom: 5px;
+        }
+
+        .price-line {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .price-original {
+            font-size: 24px;
+            text-decoration: line-through;
+            opacity: 0.5;
+            margin-right: 12px;
+        }
+
+        .price-amount {
+            font-family: 'IM Fell Great Primer', serif;
+            font-size: 42px;
+            font-weight: 400;
+            color: var(--sun-yellow);
+        }
+
+        .save-note {
+            font-size: 14px;
+            color: var(--sun-yellow);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .price-description {
+            opacity: 0.7;
+            margin: 12px 0 0;
+            font-size: 13px;
+        }
+
+        /* Email Capture Inside Price Box - Now at Bottom */
+        .email-capture-inside {
+            margin-top: 0;
+        }
+
+        .email-form-inside {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        @media (min-width: 450px) {
+            .email-form-inside {
+                flex-direction: row;
+            }
+        }
+
+        .email-input-inside {
+            flex: 1;
+            padding: 14px 16px;
+            font-size: 15px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 4px;
+            font-family: 'Archivo', sans-serif;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            transition: border-color 0.3s;
+        }
+
+        .email-input-inside::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .email-input-inside:focus {
+            outline: none;
+            border-color: var(--sun-yellow);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .email-submit-inside {
+            background: var(--sun-yellow);
+            color: var(--charcoal);
+            padding: 14px 24px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Archivo', sans-serif;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .email-submit-inside:hover {
+            background: var(--sun-yellow-light);
+        }
+
+        .email-note-inside {
+            font-size: 12px;
+            opacity: 0.6;
+            margin-top: 12px;
+        }
+
+        .price-coupon-tag {
+            display: inline-block;
+            background: var(--sun-yellow);
+            color: var(--charcoal);
+            padding: 5px 14px;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button-large {
+            display: block;
+            background: var(--sun-yellow);
+            color: var(--charcoal);
+            padding: 16px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-family: 'Archivo', sans-serif;
+        }
+
+        .cta-button-large:hover {
+            background: var(--sun-yellow-light);
+            transform: scale(1.02);
+        }
+
+        /* ============================================
+           GUARANTEE SECTION
+           ============================================ */
+        .guarantee-section {
+            padding: 60px 20px;
+            background: var(--milk-white);
+        }
+
+        .guarantee-box {
+            max-width: 650px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            text-align: center;
+        }
+
+        @media (min-width: 600px) {
+            .guarantee-box {
+                flex-direction: row;
+                text-align: left;
+            }
+        }
+
+        .guarantee-badge-large {
+            width: 110px;
+            height: 110px;
+            background: var(--sun-yellow);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--charcoal);
+            flex-shrink: 0;
+        }
+
+        .guarantee-badge-large span:first-child {
+            font-family: 'IM Fell Great Primer', serif;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        .guarantee-badge-large span:last-child {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .guarantee-content h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .guarantee-content p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* ============================================
+           FAQ SECTION
+           ============================================ */
+        .faq-section {
+            padding: 60px 20px;
+            background: var(--light-stone);
+        }
+
+        .faq-section h2 {
+            font-size: clamp(24px, 4vw, 32px);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-grid {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--milk-white);
+            margin-bottom: 12px;
+            border-radius: 6px;
+            padding: 20px 25px;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .faq-a {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* ============================================
+           FINAL CTA
+           ============================================ */
+        .final-cta {
+            padding: 70px 20px;
+            background: var(--charcoal);
+            text-align: center;
+            color: var(--milk-white);
+        }
+
+        .final-cta h2 {
+            font-size: clamp(24px, 4vw, 36px);
+            margin-bottom: 15px;
+            color: var(--milk-white);
+        }
+
+        .final-cta p {
+            opacity: 0.85;
+            max-width: 520px;
+            margin: 0 auto 25px;
+            font-size: 16px;
+        }
+
+        /* ============================================
+           PS SECTION
+           ============================================ */
+        .ps-section {
+            padding: 45px 20px;
+            background: var(--light-stone);
+        }
+
+        .ps-content {
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 14px;
+        }
+
+        .ps-item {
+            margin-bottom: 18px;
+            color: var(--text-secondary);
+        }
+
+        .ps-item strong {
+            color: var(--charcoal);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        footer {
+            padding: 25px 20px;
+            background: var(--charcoal);
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            font-size: 12px;
+        }
+
+        footer a {
+            color: var(--sun-yellow);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content container">
+        <div class="credential-hero">✓ Trained by UC Certified Master Gardener</div>
+        
+        <!-- HERO IMAGE: Recommended 1200x600px, beautiful thriving raised bed garden -->
+        <div class="hero-image-placeholder">
+            <div class="placeholder-content">
+                <span class="placeholder-label">HERO IMAGE</span>
+                <span class="placeholder-specs">1200 × 600px</span>
+                <span class="placeholder-desc">Thriving raised bed garden with vegetables</span>
+            </div>
+        </div>
+        
+        <h1>Grow Your Own Vegetables <span>Even With Terrible Soil, No Space, or Zero Experience</span></h1>
+        
+        <p class="hero-specifics">A proven step-by-step class with <strong>13 video lessons + 32-page Skill Sheet</strong> showing you exactly how to build, fill, plant, and harvest a raised bed garden.</p>
+        
+        <a href="#purchase" class="cta-button">
+            <span class="cta-main">Get Instant Access <s>$199</s> $133.33</span>
+            <span class="cta-sub">Enter your email below to unlock this discount</span>
+        </a>
+        <div class="guarantee-badge">✓ 30-Day Money-Back Guarantee • No Questions Asked</div>
+    </div>
+</section>
+
+<!-- Pain Section -->
+<section class="pain-section">
+    <div class="container">
+        <h2>If You've Struggled to Start a Garden, You're Not Alone</h2>
+        
+        <div class="pain-bullets">
+            <div class="pain-bullet">
+                <div class="pain-icon">📱</div>
+                <div class="pain-text">
+                    <strong>"YouTube has 1,000 different ways to start tomatoes"</strong>
+                    <span>You've spent hours watching videos and saved hundreds of Pinterest pins, but you still don't know what to actually DO first.</span>
+                </div>
+            </div>
+            
+            <div class="pain-bullet">
+                <div class="pain-icon">🪴</div>
+                <div class="pain-text">
+                    <strong>"I tried cheap fabric pots and failed miserably"</strong>
+                    <span>Your soil is terrible. You've made expensive mistakes. Every failed attempt chips away at your confidence.</span>
+                </div>
+            </div>
+            
+            <div class="pain-bullet">
+                <div class="pain-icon">🛒</div>
+                <div class="pain-text">
+                    <strong>"Grocery prices keep climbing"</strong>
+                    <span>Organic produce costs a fortune. You wonder what chemicals are in your family's food. You want to grow your own, you just need someone to show you how.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="timeline-section">
+    <div class="container">
+        <h2>Your Realistic Path to Fresh Food</h2>
+        
+        <!-- TIMELINE PHOTOS: Show real progression -->
+        <div class="timeline-photos">
+            <div class="timeline-photo-item">
+                <div class="timeline-photo-placeholder">
+                    <span class="placeholder-label">WEEK 1</span>
+                    <span class="placeholder-specs">400 × 300px</span>
+                </div>
+                <p>Building the bed</p>
+            </div>
+            <div class="timeline-photo-item">
+                <div class="timeline-photo-placeholder">
+                    <span class="placeholder-label">WEEK 2</span>
+                    <span class="placeholder-specs">400 × 300px</span>
+                </div>
+                <p>Filled & planted</p>
+            </div>
+            <div class="timeline-photo-item">
+                <div class="timeline-photo-placeholder">
+                    <span class="placeholder-label">WEEK 6-8</span>
+                    <span class="placeholder-specs">400 × 300px</span>
+                </div>
+                <p>First harvest</p>
+            </div>
+            <div class="timeline-photo-item">
+                <div class="timeline-photo-placeholder">
+                    <span class="placeholder-label">FULL SEASON</span>
+                    <span class="placeholder-specs">400 × 300px</span>
+                </div>
+                <p>Abundant harvest</p>
+            </div>
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker">Wk 1</div>
+                <div class="timeline-content">
+                    <h3>Build Your Raised Bed</h3>
+                    <p>Watch lessons 3-5, grab supplies from the Skill Sheet checklist, and construct your simple, inexpensive bed.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-marker">Wk 2</div>
+                <div class="timeline-content">
+                    <h3>Fill, Prepare & Plant</h3>
+                    <p>Learn the soil formula, set up irrigation, and get your first seeds or transplants in the ground.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-marker">Wk 6-8</div>
+                <div class="timeline-content">
+                    <h3>First Harvest</h3>
+                    <p>Depending on what you plant, you could be eating your own lettuce, radishes, or greens within 6-8 weeks.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-marker">Season</div>
+                <div class="timeline-content">
+                    <h3>Ongoing Abundance</h3>
+                    <p>A single 4x8 bed can produce 50-100+ lbs of vegetables per growing season with proper planning.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Instructor Section -->
+<section class="instructor-section">
+    <div class="container">
+        <div class="instructor-card">
+            <!-- INSTRUCTOR PHOTO: Recommended 260x260px, Brian in his garden or teaching -->
+            <div class="instructor-image-placeholder">
+                <span class="placeholder-label">BRIAN PHOTO</span>
+                <span class="placeholder-specs">260 × 260px</span>
+                <span class="placeholder-desc">In garden or teaching</span>
+            </div>
+            <div class="instructor-info">
+                <h3>Your Instructor: Brian Lowell</h3>
+                <div class="instructor-credentials">
+                    <span class="credential-tag">30+ Years Growing Food</span>
+                    <span class="credential-tag">UC Master Gardener Trained</span>
+                    <span class="credential-tag">Next Level Gardening</span>
+                </div>
+                <p>Brian lives and gardens in Southern California with his wife Emilie, son Noah, and their terrier Boomer. What started as a teenage hobby became a lifelong passion for helping families grow their own safe, healthy food.</p>
+                <p class="instructor-quote">"Growing my own food guaranteed my family could enjoy a safe and healthy diet. Now I can't wait to help you do the same."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+    <div class="container">
+        <h2>What You'll Be Able to Do After This Class</h2>
+        
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Build a Bed This Weekend</h3>
+                <p>The Skill Sheet includes exact materials lists. No guessing, no multiple trips to Home Depot.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Grow in Limited Space</h3>
+                <p>Works on patios, balconies, and small yards. Brian shows you how to maximize every square inch.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Skip the Salad Aisle</h3>
+                <p>A well-planned bed can provide fresh greens for 3-4 months of the growing season.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Extend Your Season</h3>
+                <p>Learn simple techniques to harvest earlier in spring and later into fall than your neighbors.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Work With Any Soil</h3>
+                <p>Raised beds let you build UP from whatever you have. No fighting against terrible native soil.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Grow What You Eat</h3>
+                <p>Brian helps you choose the right crops for your climate and your dinner table.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What's Inside -->
+<section class="whats-inside" id="curriculum">
+    <div class="container">
+        <h2>Everything Included in Your Class</h2>
+        
+        <div class="inside-grid">
+            <div class="inside-item">
+                <div class="inside-number">13</div>
+                <div class="inside-label">Video Lessons</div>
+                <div class="inside-detail">From "You Can Garden!" through planting, extending seasons, and companion planting</div>
+            </div>
+            
+            <div class="inside-item">
+                <div class="inside-number">1.5+</div>
+                <div class="inside-label">Hours of Instruction</div>
+                <div class="inside-detail">Plus bonus FAQ videos answering the questions you don't know to ask yet</div>
+            </div>
+            
+            <div class="inside-item">
+                <div class="inside-number">32</div>
+                <div class="inside-label">Page Skill Sheet</div>
+                <div class="inside-detail">Step-by-step building instructions, materials lists, and quick-reference guides</div>
+            </div>
+            
+            <div class="inside-item">
+                <div class="inside-number">∞</div>
+                <div class="inside-label">Lifetime Access</div>
+                <div class="inside-detail">Watch as many times as you need, season after season</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Proof Section -->
+<section class="proof-section">
+    <div class="container">
+        <h2>What Members Say About School of Traditional Skills</h2>
+        <p class="proof-intro">Here's what students are saying about this class:</p>
+        
+        <!-- STUDENT GARDEN PHOTOS: Real results from real students -->
+        <div class="student-gardens">
+            <h3 class="student-gardens-title">Real Gardens from Real Students</h3>
+            <div class="student-gardens-grid">
+                <div class="student-garden-item">
+                    <div class="student-garden-placeholder">
+                        <span class="placeholder-label">STUDENT GARDEN 1</span>
+                        <span class="placeholder-specs">350 × 250px</span>
+                    </div>
+                    <p class="student-caption">"My first raised bed harvest!"</p>
+                </div>
+                <div class="student-garden-item">
+                    <div class="student-garden-placeholder">
+                        <span class="placeholder-label">STUDENT GARDEN 2</span>
+                        <span class="placeholder-specs">350 × 250px</span>
+                    </div>
+                    <p class="student-caption">"Started with zero experience"</p>
+                </div>
+                <div class="student-garden-item">
+                    <div class="student-garden-placeholder">
+                        <span class="placeholder-label">STUDENT GARDEN 3</span>
+                        <span class="placeholder-specs">350 × 250px</span>
+                    </div>
+                    <p class="student-caption">"Patio garden in the city"</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <!-- TESTIMONIAL 1 PLACEHOLDER -->
+                <p class="testimonial-placeholder">"[TESTIMONIAL 1: Student quote about their experience with the raised bed gardening class]"</p>
+                <span class="testimonial-source">— [Student Name / Location]</span>
+            </div>
+            
+            <div class="testimonial">
+                <!-- TESTIMONIAL 2 PLACEHOLDER -->
+                <p class="testimonial-placeholder">"[TESTIMONIAL 2: Student quote about results or transformation]"</p>
+                <span class="testimonial-source">— [Student Name / Location]</span>
+            </div>
+            
+            <div class="testimonial">
+                <!-- TESTIMONIAL 3 PLACEHOLDER -->
+                <p class="testimonial-placeholder">"[TESTIMONIAL 3: Student quote about Brian's teaching style or the Skill Sheet]"</p>
+                <span class="testimonial-source">— [Student Name / Location]</span>
+            </div>
+        </div>
+
+        <div class="stats-row">
+            <div class="stat-item">
+                <!-- STAT 1 PLACEHOLDER -->
+                <strong>[X]</strong>
+                <span>Students Enrolled</span>
+            </div>
+            <div class="stat-item">
+                <!-- STAT 2 PLACEHOLDER -->
+                <strong>[X%]</strong>
+                <span>Would Recommend</span>
+            </div>
+            <div class="stat-item">
+                <!-- STAT 3 PLACEHOLDER -->
+                <strong>[X]</strong>
+                <span>Star Rating</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Offer Section with Email Capture -->
+<section class="offer-section" id="purchase">
+    <div class="container">
+        <h2>Get Complete Access Today</h2>
+        <p class="offer-subtitle">One payment. Lifetime access. No subscription.</p>
+        
+        <!-- Combined Price Box with Email Capture -->
+        <div class="price-box">
+            <div class="price-box-content">
+                
+                <!-- Value Stack First -->
+                <div class="value-stack">
+                    <h3 class="value-title">Here's What You're Getting:</h3>
+                    <ul class="included-list">
+                        <li>13 video lessons (1.5+ hours)</li>
+                        <li>32-page printable Skill Sheet</li>
+                        <li>Bonus FAQ video section</li>
+                        <li>Companion planting & crop rotation tips</li>
+                        <li>30-day money-back guarantee</li>
+                    </ul>
+                </div>
+                
+                <div class="price-divider"></div>
+                
+                <!-- Price Display -->
+                <div class="price-header">
+                    <span class="price-line"><span class="price-original">$199</span> <span class="price-amount">$133.33</span></span>
+                    <p class="save-note">Save 33% today</p>
+                </div>
+                
+                <p class="price-description">One-time payment • Instant access • Keep forever</p>
+                
+                <div class="price-divider"></div>
+                
+                <!-- Email Capture at Bottom -->
+                <div class="email-capture-inside">
+                    <form class="email-form-inside" action="#" method="post">
+                        <input type="email" class="email-input-inside" placeholder="Enter your email address" required>
+                        <button type="submit" class="email-submit-inside">Unlock My Discount →</button>
+                    </form>
+                    
+                    <p class="email-note-inside">🔒 Enter your email to claim this discount</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Guarantee Section -->
+<section class="guarantee-section">
+    <div class="container">
+        <div class="guarantee-box">
+            <div class="guarantee-badge-large">
+                <span>30</span>
+                <span>Day Guarantee</span>
+            </div>
+            <div class="guarantee-content">
+                <h3>"See It to Believe It" Guarantee</h3>
+                <p>You have a full 30 days to watch every lesson, download the Skill Sheet, and decide if this is right for you.</p>
+                <p style="margin-top: 10px;">If it's not what we promised, email us and we'll return your money. No questions asked.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2>Quick Answers</h2>
+        
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-q">"I live in an apartment. Can I use this?"</div>
+                <div class="faq-a">Yes. Raised beds work on patios, balconies, and small spaces. Brian shows you how to maximize limited areas.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-q">"I've killed every plant I've owned."</div>
+                <div class="faq-a">This class starts with "You Can Garden!" and assumes zero experience. Every step is shown, not just talked about.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-q">"My soil is terrible."</div>
+                <div class="faq-a">That's the point of raised beds. You build UP from whatever you have. Lesson 4 covers exactly how to handle this.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-q">"How long until I'm harvesting?"</div>
+                <div class="faq-a">Realistically: build your bed in week 1, plant in week 2, first harvest in 6-8 weeks depending on what you grow.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-q">"What if it doesn't work for me?"</div>
+                <div class="faq-a">30-day money-back guarantee. Watch everything, try the methods, and if it's not for you, email for a full refund.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+    <div class="container">
+        <h2>Stop Researching. Start Growing.</h2>
+        <p>Every week spent watching random YouTube videos is another week without fresh food on your table. Get the organized, step-by-step system you need to actually start.</p>
+        
+        <a href="#purchase" class="cta-button">
+            <span class="cta-main">Get Instant Access <s>$199</s> $133.33</span>
+            <span class="cta-sub">Enter your email above to unlock this discount</span>
+        </a>
+        <div class="guarantee-badge" style="margin-top: 15px;">✓ 30-Day Guarantee • Lifetime Access</div>
+        
+    </div>
+</section>
+
+<!-- PS Section -->
+<section class="ps-section">
+    <div class="ps-content">
+        <div class="ps-item">
+            <strong>P.S.</strong> Grocery prices continue to climb, and organic produce costs significantly more than conventional. Even a small raised bed garden can provide fresh salads for months and reduce your dependence on the store. This $133.33 investment (with your email discount) gives you a skill you'll use for the rest of your life.
+        </div>
+        <div class="ps-item">
+            <strong>P.P.S.</strong> Still deciding? You have 30 full days to try everything. Watch the videos, download the Skill Sheet, even start building. If it's not for you, email for a refund. You risk nothing.
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 School of Traditional Skills | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/legal-terms/">Terms</a></p>
+</footer>
+
+</body>
+</html>
